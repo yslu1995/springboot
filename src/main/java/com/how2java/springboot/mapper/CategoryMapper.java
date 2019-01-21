@@ -1,0 +1,18 @@
+package com.how2java.springboot.mapper;
+
+import com.how2java.springboot.pojo.Category;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
+
+/**
+ * @Description:
+ * @Author: LYS
+ * @Date: 2019/1/21 15:43
+ */
+@Mapper
+public interface CategoryMapper {
+
+    List<Category> findAll();
+
+}
