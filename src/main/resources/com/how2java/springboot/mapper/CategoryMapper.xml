@@ -3,7 +3,19 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.how2java.springboot.mapper.CategoryMapper">
+    <insert id="save">
+        insert into category_store (id, name ) values (#{id},#{name})
+    </insert>
+    <update id="update">
+        update category_store set name = #{name} where id = #{id}
+    </update>
+    <delete id="delete">
+        delete from category_store where id = #{id}
+    </delete>
     <select id="findAll" resultType="com.how2java.springboot.pojo.Category">
         select * from category_store
+    </select>
+    <select id="get" resultType="com.how2java.springboot.pojo.Category">
+        select * from category_store where id = #{id}
     </select>
 </mapper>
