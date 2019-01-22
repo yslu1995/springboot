@@ -6,15 +6,15 @@ package com.how2java.springboot.pojo;
  * @Date: 2019/1/21 15:09
  */
 public class Category {
-    private int id;
+    private String id;
 
     private String name;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

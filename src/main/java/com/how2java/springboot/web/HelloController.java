@@ -20,9 +20,9 @@ public class HelloController {
     public String hello(Model m) throws Exception{
         m.addAttribute("now", DateFormat.getDateTimeInstance().format(new Date()));
 //        m.addAttribute("apple", "吃了吗");
-        if(true){
-            throw new Exception("some exception");
-        }
+//        if(true){
+//            throw new Exception("some exception");
+//        }
         return "hello";
     }
 }
