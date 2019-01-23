@@ -8,6 +8,12 @@ spring:
               username: root
               password: 123456
               driver-class-name: com.mysql.cj.jdbc.Driver
+      http:
+          multipart:
+          # 设置上传文件的大小，默认是1m,太小了，文件稍微大一点就会出错
+              maxFileSize: 100Mb
+              maxRequestSize: 100Mb
+
 mybatis:
        mapper-locations: classpath:com/how2java/springboot/mapper/*.xml
        type-aliases-package: com.how2java.springboot.pojo
