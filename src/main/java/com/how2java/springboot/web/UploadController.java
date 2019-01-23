@@ -30,7 +30,7 @@ public class UploadController {
         try {
             String fileName = System.currentTimeMillis() + file.getOriginalFilename();
             String destFileName = req.getServletContext().getRealPath("") + "uploaded" + File.separator + fileName;
-
+            System.out.println(req.getServletContext().getRealPath(""));
             File destFile = new File(destFileName);
             destFile.getParentFile().mkdirs();
             file.transferTo(destFile);
