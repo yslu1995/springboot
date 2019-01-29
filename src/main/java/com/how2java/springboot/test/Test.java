@@ -1,6 +1,7 @@
 package com.how2java.springboot.test;
 
 
+import cn.hutool.core.date.DateUtil;
 import com.how2java.springboot.SpringbootApplication;
 import com.how2java.springboot.mapper.CategoryMapper;
 import com.how2java.springboot.pojo.Category;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Date;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -34,6 +36,9 @@ public class Test {
         for (Category c : cs) {
             System.out.println("c.getName():" + c.getName());
         }
-
+        String dateStr = "2012-12-12 12:12:12";
+        Date date = DateUtil.parse(dateStr);
+        System.out.println(date);
     }
+    
 }
